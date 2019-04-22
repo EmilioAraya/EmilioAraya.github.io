@@ -1,0 +1,154 @@
+.footer{
+    background-color: black important;
+}
+
+.body{
+    
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #d9534f;
+    background-color: red;
+  }
+
+.navbar, .navbar-collapse{
+    margin: 0px;   
+    background-color: black;
+    z-index: 99999;
+    border: 0;
+    font-size: 50px !important;
+    line-height: 1.4 !important; 
+    border-radius: 0;
+    text-align: center;
+ 
+}
+
+.jumbotron, .row{
+    margin-top: 100; 
+    display: block;
+    margin: auto;
+    color:black;
+
+}
+
+.logo{
+    color: #d9534f;
+    font-size: 150px;
+}
+
+.logo-small{
+    color: #d9534f;
+    font-size: 150px; 
+}
+
+h2{
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.container-fluid{
+    padding: 60px 50px;
+    background-color: black;
+
+}
+
+.background-grey{
+    background-color: gray;
+}
+
+h4{
+    font-size: 19px;
+    line-height: 1.35em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px; 
+}
+
+div#restaurantes, div#menu, div#promociones{
+    display: block;
+    margin: auto;
+    background-color: black;
+}
+
+div#res{
+    background-color: black;
+}
+
+p{
+    color: #d9534f;
+    text-align: center; 
+}
+
+a{
+    color: #560606;
+}
+
+li:hover{
+    background-color:  #a50478;
+}
+
+.container{
+    background-color: black;
+}
+
+div#grafico, div#promocion1{
+
+    max-width: 100%;
+    
+    height: 10em;
+    background-color: black;
+    border: none;
+}
+
+li{
+    
+    font: 400 15px Lato, sans-serif;
+}
+
+body#paginaPrincipal{
+    background-color: black !important;
+}
+
+div#contacto{
+    background-color: black !important;
+}
+
+.col-sm-3{
+    background-color: black;
+    max-width: 100%;
+    z-index: 9999;
+    text-align: center;
+    height: 50em;
+}
+
+div#miVentana, div#miVentana2, div#miVentana3{
+    position: fixed;
+    z-index: 10000000; 
+    width: 40em; 
+    height: 30em; 
+    top: 0; 
+    left: 0; 
+    font-family:Verdana, Arial, Helvetica, sans-serif; 
+    font-size: 12px; 
+    font-weight: normal; 
+    background-color: #000000; 
+    color: #FAFAFA; 
+    display:none;
+}
+
+body#bodyCompra{
+    background-color: black !important;
+}
+
+input#provincia{
+    border: #560606;
+}
+
+div#datos{
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #d9534f;
+}
+

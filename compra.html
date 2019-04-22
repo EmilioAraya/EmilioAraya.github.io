@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>compra</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--content es para los dispositivos moviles-->
+    <script type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css" type="text/css">
+
+</head>
+
+<body id="bodyCompra" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+
+
+        <div class="container">
+            <div class="navbar-header"></div>
+            <!--Sera un contenedor con 12 columnas-->
+            <div class="row">
+                <div class="col-sm-6" id="datos">
+
+
+                    <script>
+                        cargarCarrito();
+                    </script>
+
+                </div>
+
+                <div class="col-sm-6">
+                    <input class="form-control" type="text" name="provinvia" id="provinvia" placeholder="Provinvia"
+                        required />
+                    <input class="form-control" type="text" name="canton" id="canton" placeholder="Cantón" required />
+                    <input class="form-control" type="text" name="distrito" id="distrito" placeholder="Distrito"
+                        required />
+                    <input class="form-control" type="number" name="telefono" id="telefono" placeholder="Teléfono"
+                        required />
+                    <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Otras señas"
+                        rows="5"></textarea>
+                    <button class="btn btn-success" type="submit" onclick="finalizar()">
+                        Enviar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavBar">
+            <!--Modo visualizacion horizontal-->
+
+        </div>
+        </div>
+    </nav>
+</body>
+
+</html>

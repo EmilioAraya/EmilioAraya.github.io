@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Proyecto</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+</head>
+
+<body id="paginaPrincipal" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+
+
+        <div class="container">
+
+            <!--Sera un contenedor con 12 columnas-->
+
+            <div class="navbar-header">
+                <!--Modo visualidacion vertical-->
+                <a class="navbar-brand" href="#paginaPrincipal"> </a>
+                <img src="img/logo.png" alt="logo" width="80" height="80" />
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#myNavBar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="myNavBar">
+                <!--Modo visualizacion horizontal-->
+                <label>Bienvenidos</label>
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li><a href="#restaurantes"> <i class="fas fa-utensils"> </i> Restaurante </a></li>
+
+                    <li><a href="#promociones"> <i class="fas fa-ad"> </i> Promociones </a></li>
+                    <li><a href="#contacto"> <i class="fas fa-id-card"> </i> Contacto </a></li>
+                    <li><a href=""> <i class="fas fa-question-circle" onclick="limpiar()"> </i> Nueva compra </a></li>
+                    <li><a id="carrito" href="compra.html" target="_blank"> <i class="fas fa-shopping-cart"></i> Comprar
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <section>
+        <div class="jumbotrom text-center">
+            <div class="row">
+                <img class="img-responsive" src="img/jumbo.jpg" width="100%" height="100%">
+            </div>
+        </div>
+    </section>
+
+    <div id="tipodesarrollo" class="container-fluid text-center">
+        <div class="col-sm-3" id="restaurantes">
+            <h2>Lista de restaurantes</h2>
+            <div class="thumbnail" id="res">
+                <li> <a href="javascript:cargarMenus(1)"> Pizza hut </a> </li>
+                </br>
+                <li> <a href="javascript:cargarMenus(2)">Taco Bell </a> </li>
+                </br>
+                <li><a href="javascript:cargarMenus(3)"> Popeyes </a> </li>
+                </br>
+                <li><a href="javascript:cargarMenus(4)"> Carl's Jr. </a></li>
+                </br>
+                <li><a href="javascript:cargarMenus(5)"> McDonald's </a></li>
+            </div>
+
+            <canvas id="bar-chart" width="800" height="450">
+
+            </canvas>
+
+
+        </div>
+
+        <div class="col-sm-3" id="menus">
+            <!--aque va menu-->
+
+        </div>
+
+        <div class="col-sm-3" id='mapa'>
+
+           
+
+        </div>
+
+        <div class="col-sm-3" id="promociones">
+                <h2>Promociones</h2>
+            <div class="thumbnail" id="promocion1">
+
+                <img class="img-responsive" src="img/promo1.jpg" width="100%" height="100%"
+                    onmouseover="mostrarVentana(1)">
+                <img class="img-responsive" src="img/promo2.jpg" width="100%" height="100%"
+                    onmouseover="mostrarVentana(2)">
+                <img class="img-responsive" src="img/promo3.jpg" width="100%" height="100%"
+                    onmouseover="mostrarVentana(3)">
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div id="miVentana">
+        <img class="img-responsive" src="img/promo1.jpg" width="100%" height="100%">
+        <button type="button" class="btn btn-success"
+            onclick="agregar('PAQUETE-MEDIANAS',13900, 'Pizza Hut')">Agregar</button>
+        <button name="Cerrar" type="button" class="btn btn-danger" onclick="ocultarVentana(1)">
+            Cerrar
+        </button>
+        <h4>Para los amantes a las Pizzas</h4>
+    </div>
+
+    <div id="miVentana2">
+        <img class="img-responsive" src="img/promo2.jpg" width="100%" height="100%">
+        <button type="button" class="btn btn-success"
+            onclick="agregar('DAME-ESOS-6',2500, 'Taco Bell')">Agregar</button>
+        <button name="Cerrar" type="button" class="btn btn-danger" onclick="ocultarVentana(2)">
+            Cerrar
+        </button>
+        <h4>Para los amantes a los Tacos</h4>
+    </div>
+
+    <div id="miVentana3">
+        <img class="img-responsive" src="img/promo3.jpg" width="100%" height="100%">
+        <button type="button" class="btn btn-success"
+            onclick="agregar('CHARBROILED',2400, 'Carls Jr.')">Agregar</button>
+        <button name="Cerrar" type="button" class="btn btn-danger" onclick="ocultarVentana(3)">
+            Cerrar
+        </button>
+        <h4>Para los amantes a las Hamburguesas</h4>
+    </div>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=initMap"
+        async defer></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+</body>
+
+<footer id="contacto">
+    <div id="pep">
+        <p>Contacto: kevinaraya97@gmail.com</p>
+        <br />
+        <p>Emilio Araya all rights reserved</p>
+    </div>
+
+
+</footer>
+
+</html>
